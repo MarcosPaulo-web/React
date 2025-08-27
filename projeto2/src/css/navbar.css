@@ -1,0 +1,24 @@
+header {
+  background-color: gray;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: safe;
+  padding-inline-start: 5px;
+  gap: 10px;
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+nav li {
+  list-style: none;
+  cursor: pointer;
+}
+nav li:hover {
+  text-decoration: underline;
+}
