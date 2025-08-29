@@ -1,4 +1,4 @@
-import { ChevronRight, Trash } from "lucide-react";
+import { Check, ChevronRight, Trash } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import Button from "./Buttom";
 
@@ -21,6 +21,11 @@ function Tasks({ tasks, onTaskClick, removeTask }) {
             className={`text-left w-full bg-slate-400 text-white p-2 rounded-md
               ${task.isCompleted && "line-through"}`}
           >
+            <Check
+              className={`mr-2 transition-opacity duration-200 ${
+                task.isCompleted ? "opacity-100" : "opacity-0"
+              }`}
+            />
             {task.title}
           </button>
           <Button
