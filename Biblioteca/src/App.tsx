@@ -3,14 +3,18 @@ import { Card } from "./Components/Card";
 
 function App() {
   return (
-    <div className="bg-slate-200 w-screen h-full ">
+    <div className="bg-slate-100 w-screen min-h-screen max-h-full   ">
       <Navbar></Navbar>
 
-      <main className="flex justify-center w-full">
-        <div
-          className="justify-start mt-5 flex flex-wrap gap-7 md:gap-3 sm:gap-1 
-        "
-        >
+      <main className="justify-center flex mt-10 ">
+        <div className=" grid gap-3  grid-cols-1 xl:grid-cols-5 lg:grid-cols-4  md:grid-cols-3 sm:grid-cols-2  ">
+          <Card></Card>
+          <Card></Card>
+          <Card></Card>
+          <Card></Card>
+          <Card></Card>
+          <Card></Card>
+          <Card></Card>
           <Card></Card>
           <Card></Card>
           <Card></Card>

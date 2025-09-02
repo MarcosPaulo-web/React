@@ -22,11 +22,11 @@ export function Card() {
             saiba mais{" ->"}
           </a>
         </div>
-        <div className="space-x-2">
-          <button className=" bg-blue-700 px-1 py-1.5 rounded-md text-xs font-semibold text-slate-100">
+        <div className="space-x-2 flex">
+          <button className="w-1/2 bg-blue-700 px-1 py-1.5 rounded-md text-xs font-semibold text-slate-100">
             Reservar
           </button>
-          <button className="bg-yellow-400 px-1 py-1.5 rounded-md text-xs font-semibold">
+          <button className="w-1/2 bg-yellow-400 px-1 py-1.5 rounded-md text-xs font-semibold">
             Editar
           </button>
         </div>
