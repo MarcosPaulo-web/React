@@ -18,7 +18,7 @@ interface NavbarBibliotecaProps {
 const baseTheme = createTheme({
   navbar: {
     link: {
-      base: "!text-slate-900 hover:!text-slate-200 transition-colors",
+      base: "!text-slate-900 hover:!text-slate-1000 transition-colors",
       active: {
         on: "!text-slate-200  hover:!text-slate-50 font-bold",
         off: "",
@@ -68,15 +68,10 @@ export function NavbarBiblioteca({ toggleTheme }: NavbarBibliotecaProps) {
             </button>
           </DropdownItem>
         </Dropdown>
-        <NavbarToggle />
+        <NavbarToggle className="text-slate-100 hover:bg-blue-800 dark:text-slate-50" />
       </div>
       <NavbarCollapse>
-        <NavbarLink
-          theme={baseTheme.navbar.link}
-          className="text-white dark:text-slate-300"
-          href="#"
-          active
-        >
+        <NavbarLink theme={baseTheme.navbar.link} href="#" active>
           Home
         </NavbarLink>
         <NavbarLink theme={baseTheme.navbar.link} href="#">

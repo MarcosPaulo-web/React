@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Card } from "./Components/Card";
 import { NavbarBiblioteca } from "./Components/NavbarBiblioteca";
+import { ThemeInit } from "../.flowbite-react/init";
+
 function App() {
   const [darkMode, setDarkMode] = useState<boolean>(false);
   function toggleTheme() {
@@ -14,6 +16,7 @@ function App() {
 
   return (
     <div className={`${darkMode ? "dark" : ""}`}>
+      <ThemeInit />
       <div
         className={`bg-slate-100 w-screen min-h-screen max-h-full dark:bg-slate-500`}
       >
