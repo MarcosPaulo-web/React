@@ -1,32 +1,48 @@
-import { Navbar } from "./Components/Navbar";
+import { useState } from "react";
 import { Card } from "./Components/Card";
-
+import { NavbarBiblioteca } from "./Components/NavbarBiblioteca";
 function App() {
-  return (
-    <div className="bg-slate-100 w-screen min-h-screen max-h-full   ">
-      <Navbar></Navbar>
+  const [darkMode, setDarkMode] = useState<boolean>(false);
+  function toggleTheme() {
+    console.log("trocou");
+    if (darkMode) {
+      setDarkMode(false);
+    } else {
+      setDarkMode(true);
+    }
+  }
 
-      <main className="justify-center flex mt-10 ">
-        <div className=" grid gap-3  grid-cols-1 xl:grid-cols-5 lg:grid-cols-4  md:grid-cols-3 sm:grid-cols-2  ">
-          <Card></Card>
-          <Card></Card>
-          <Card></Card>
-          <Card></Card>
-          <Card></Card>
-          <Card></Card>
-          <Card></Card>
-          <Card></Card>
-          <Card></Card>
-          <Card></Card>
-          <Card></Card>
-          <Card></Card>
-          <Card></Card>
-          <Card></Card>
-          <Card></Card>
-          <Card></Card>
-          <Card></Card>
-        </div>
-      </main>
+  return (
+    <div className={`${darkMode ? "dark" : ""}`}>
+      <div
+        className={`bg-slate-100 w-screen min-h-screen max-h-full dark:bg-slate-500`}
+      >
+        <NavbarBiblioteca toggleTheme={toggleTheme}></NavbarBiblioteca>
+
+        <main className="justify-center flex mt-10 ">
+          <div
+            className={`grid gap-3  grid-cols-1 xl:grid-cols-5 lg:grid-cols-4  md:grid-cols-3 sm:grid-cols-2  `}
+          >
+            <Card></Card>
+            <Card></Card>
+            <Card></Card>
+            <Card></Card>
+            <Card></Card>
+            <Card></Card>
+            <Card></Card>
+            <Card></Card>
+            <Card></Card>
+            <Card></Card>
+            <Card></Card>
+            <Card></Card>
+            <Card></Card>
+            <Card></Card>
+            <Card></Card>
+            <Card></Card>
+            <Card></Card>
+          </div>
+        </main>
+      </div>
     </div>
   );
 }

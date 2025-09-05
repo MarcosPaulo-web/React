@@ -1,6 +1,6 @@
 export function Card() {
   return (
-    <div className="space-x-2 flex size-50 w-fit border-blue-400 border-2 p-2 rounded-md">
+    <div className="space-x-2 flex size-50 w-fit border-blue-400 border-2 p-2 rounded-md dark:border-blue-700 dark:bg-slate-400">
       <img
         src="https://m.media-amazon.com/images/I/61Jux50srZL._SL1200_.jpg"
         alt="capa do livro"
@@ -13,7 +13,7 @@ export function Card() {
           <div className="bg-blue-700 rounded-md px-2 py-0.5 text-center text-slate-100 text-xs font-medium inline-block">
             Livro
           </div>
-          <div className="bg-green-500 rounded-md px-2 py-0.5 text-center text-slate-100 text-xs font-medium inline-block">
+          <div className="bg-green-500 rounded-md px-2 py-0.5 text-center text-slate-100 text-xs font-medium inline-block dark:bg-green-700">
             Disponivel
           </div>
         </div>
