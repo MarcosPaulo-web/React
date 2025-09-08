@@ -1,13 +1,14 @@
-import { Navbar } from "./components/Navbar";
-import { Card } from "./components/Card";
+import { Card } from "./Components/Card";
+import { Navbar } from "./Components/Navbar";
+
 function App() {
   return (
     <>
       <header>
         <Navbar />
       </header>
-      <main className="container-xxl d-flex justify-content-center align-items-center">
-        <div className="row gap-3 flex-wrap justify-content-start">
+      <main className="container-fluid justify-content-center w-75">
+        <div className="row justify-content-start ">
           <Card />
           <Card />
           <Card />
