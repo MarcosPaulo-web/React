@@ -1,4 +1,14 @@
+import { useState } from "react";
+
 export function Navbar() {
+  const [tema, setTema] = useState<"light" | "dark">("light");
+
+  function toggleTheme() {
+    const newTheme = tema === "light" ? "dark" : "light";
+    setTema(newTheme);
+    document.documentElement.setAttribute("data-bs-theme", newTheme);
+  }
+
   return (
     <nav className="navbar bg-primary navbar-expand-lg ">
       <div className="container-fluid">
@@ -47,8 +57,8 @@ export function Navbar() {
                 Dropdown link
               </a>
               <ul className="dropdown-menu">
-                <li>
-                  <button className="btn btn-dark">Trocar tema</button>
+                <li onClick={toggleTheme}>
+                  <button className="btn ">Trocar tema</button>
                 </li>
               </ul>
             </li>
