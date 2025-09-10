@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { BotaoDropDown } from "./BotaoDropdown";
 
 export function Navbar() {
   const [tema, setTema] = useState<"light" | "dark">("dark");
@@ -77,18 +78,29 @@ export function Navbar() {
             <ul className="navbar-nav ">
               <li className="nav-item">
                 <a className="nav-link active" aria-current="page" href="#">
-                  Home
+                  Acervo Completo
                 </a>
               </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Features
+
+              <li className="nav-item dropdown">
+                <a
+                  className="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Livros
                 </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Pricing
-                </a>
+                <ul className="dropdown-menu bg-primary-subtle">
+                  <BotaoDropDown text={"Romance"} />
+                  <BotaoDropDown text={"Ação"} />
+                  <BotaoDropDown text={"Suspense"} />
+                  <BotaoDropDown text={"Terror"} />
+                  <BotaoDropDown text={"Comédia"} />
+                  <BotaoDropDown text={"Ciencia"} />
+                  <BotaoDropDown text={"Documentário"} />
+                </ul>
               </li>
               <li className="nav-item dropdown">
                 <a
@@ -98,11 +110,29 @@ export function Navbar() {
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  Dropdown link
+                  Periódicos
                 </a>
-                <ul className="dropdown-menu bg-primary">
+                <ul className="dropdown-menu bg-primary-subtle">
                   <li onClick={toggleTheme}>
-                    <button className="btn text-white w-100 text-start">
+                    <button className="btn w-100 text-start">
+                      Trocar tema
+                    </button>
+                  </li>
+                </ul>
+              </li>
+              <li className="nav-item dropdown">
+                <a
+                  className="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Outros Materiais
+                </a>
+                <ul className="dropdown-menu bg-primary-subtle">
+                  <li onClick={toggleTheme}>
+                    <button className="btn w-100 text-start">
                       Trocar tema
                     </button>
                   </li>
