@@ -2,23 +2,31 @@ export function Card() {
   return (
     <div className="col-10 col-md-6 col-lg-3 col-xxl-3">
       <div
-        className="card bg-body mb-3 border-1 border-primary-subtle"
+        className="card bg-body mb-3 border-2 border-primary-subtle"
         style={{ maxWidth: "540px" }}
       >
-        <div className="row g-0">
+        <div className="row g-0 h-100">
           <div className="col-md-4">
             <img
-              src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSzYreV7S_aeOd3NXcaX8vZPQHdQ-Sy3jLeTnkDlLSEvKcAuw-MgJH0bNE92I89HqW1-P1Kiw1IUVUe2yBl7AmIePKptnrwqhYEvhHLrYaP"
-              className="img-fluid rounded-start"
+              src="https://m.media-amazon.com/images/I/51i8-f+QMFL._AC_UL320_.jpg"
+              className="h-100 w-100 rounded-start object-fit-cover"
               alt="..."
             ></img>
           </div>
-          <div className="col-md-8 px-2">
+          <div className="col-md-8 px-2 ">
             <div className="card-body">
               <h3 className="card-title text-truncate">title</h3>
+
               <div className="d-flex gap-1 flex-wrap">
                 <span className="bg-primary badge">Livro</span>
                 <span className="bg-success badge">Disponivel</span>
+              </div>
+
+              <button className="btn btn-link">Saiba mais</button>
+
+              <div className="d-flex gap-2">
+                <button className="btn btn-primary">Reservar</button>
+                <button className="btn btn-warning">Editar</button>
               </div>
             </div>
           </div>
