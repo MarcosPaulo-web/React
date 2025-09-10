@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exemplos de Display CSS (Dark Mode)</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        background: #121212; /* fundo escuro */
+        color: #eaeaea; /* texto claro */
+      }
+
+      h1,
+      h2 {
+        color: #f1c40f; /* títulos em amarelo */
+      }
+
+      .caixa {
+        background: #2980b9;
+        color: white;
+        padding: 10px;
+        margin: 5px;
+        border-radius: 5px;
+        text-align: center;
+      }
+
+      /* Inline */
+      .inline span {
+        display: inline;
+        background: #e67e22;
+        padding: 5px;
+        margin: 2px;
+        border-radius: 3px;
+      }
+
+      /* Inline-block */
+      .inline-block span {
+        display: inline-block;
+        background: #27ae60;
+        padding: 10px;
+        margin: 5px;
+        width: 80px;
+        height: 50px;
+        border-radius: 3px;
+      }
+
+      /* None */
+      .none span {
+        display: none;
+      }
+
+      /* Flex */
+      .flex {
+        display: flex;
+        gap: 10px;
+      }
+
+      /* Grid */
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+      }
+
+      /* Inline-flex */
+      .inline-flex {
+        display: inline-flex;
+        gap: 5px;
+        background: #9b59b6;
+        padding: 10px;
+        border-radius: 5px;
+      }
+
+      /* Table */
+      .table {
+        display: table;
+        border: 2px solid #2c3e50;
+        margin-top: 10px;
+      }
+      .table-row {
+        display: table-row;
+      }
+      .table-cell {
+        display: table-cell;
+        border: 1px solid #7f8c8d;
+        padding: 10px;
+        color: #ecf0f1;
+      }
+
+      /* List-item */
+      .list {
+        list-style: disc;
+        padding-left: 20px;
+      }
+      .list li {
+        display: list-item;
+        background: #16a085;
+        margin: 5px 0;
+        padding: 5px;
+        border-radius: 3px;
+        color: white;
+      }
+
+      /* Contents */
+      .contents {
+        display: contents;
+      }
+      .contents span {
+        background: #c0392b;
+        color: white;
+        padding: 5px;
+        margin: 5px;
+        border-radius: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>🌙 Exemplos de Display CSS (Dark Mode)</h1>
+
+    <h2>1. Block (Estruturas)</h2>
+    <div class="caixa" style="display: block">Sou um bloco (div)</div>
+    <div class="caixa" style="display: block">Ocupo a linha toda</div>
+
+    <h2>2. Inline (Texto, links)</h2>
+    <p class="inline">
+      Texto normal <span>Inline A</span> continua <span>Inline B</span> junto.
+    </p>
+
+    <h2>3. Inline-block (Botões, menus)</h2>
+    <div class="inline-block">
+      <span>Botão 1</span>
+      <span>Botão 2</span>
+      <span>Botão 3</span>
+    </div>
+
+    <h2>4. None (Esconder)</h2>
+    <p class="none">Esse <span>texto escondido</span> não aparece.</p>
+    <p>Somente esse aparece.</p>
+
+    <h2>5. Flex (Layout fluido)</h2>
+    <div class="flex">
+      <div class="caixa">1</div>
+      <div class="caixa">2</div>
+      <div class="caixa">3</div>
+    </div>
+
+    <h2>6. Grid (Layout em grade)</h2>
+    <div class="grid">
+      <div class="caixa">1</div>
+      <div class="caixa">2</div>
+      <div class="caixa">3</div>
+      <div class="caixa">4</div>
+      <div class="caixa">5</div>
+      <div class="caixa">6</div>
+    </div>
+
+    <h2>7. Inline-flex (Flex em linha)</h2>
+    <p>
+      Texto normal
+      <span class="inline-flex">
+        <span class="caixa">A</span>
+        <span class="caixa">B</span>
+      </span>
+      continua aqui.
+    </p>
+
+    <h2>8. Table (Tabela fake)</h2>
+    <div class="table">
+      <div class="table-row">
+        <div class="table-cell">Linha 1 - Coluna 1</div>
+        <div class="table-cell">Linha 1 - Coluna 2</div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">Linha 2 - Coluna 1</div>
+        <div class="table-cell">Linha 2 - Coluna 2</div>
+      </div>
+    </div>
+
+    <h2>9. List-item (Listas)</h2>
+    <ul class="list">
+      <li>Item de lista 1</li>
+      <li>Item de lista 2</li>
+      <li>Item de lista 3</li>
+    </ul>
+
+    <h2>10. Contents (Remove a caixa)</h2>
+    <div class="contents">
+      <span>Eu</span>
+      <span>sou</span>
+      <span>conteúdo</span>
+    </div>
+    <p>Note que o "container" não aparece.</p>
+  </body>
+</html>

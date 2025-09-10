@@ -24,7 +24,7 @@ export function Card() {
 
               <button className="btn btn-link">Saiba mais</button>
 
-              <div className="d-flex gap-2">
+              <div className="d-flex gap-2 flex-wrap">
                 <button className="btn btn-primary">Reservar</button>
                 <button className="btn btn-warning">Editar</button>
               </div>

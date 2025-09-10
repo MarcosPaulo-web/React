@@ -13,7 +13,7 @@ export function Navbar() {
     <>
       <nav className="navbar bg-body">
         <div className="container-fluid">
-          <a className="navbar-brand">Senai</a>
+          <a className="navbar-brand fs-2">Senai</a>
 
           <form className="d-flex w-25" role="search">
             <input
@@ -36,7 +36,7 @@ export function Navbar() {
             >
               Dropdown button
             </button>
-            <ul className="dropdown-menu">
+            <ul className="dropdown-menu bg-primary-subtle">
               <li>
                 <a className="dropdown-item" href="#">
                   Action
@@ -100,9 +100,11 @@ export function Navbar() {
                 >
                   Dropdown link
                 </a>
-                <ul className="dropdown-menu">
+                <ul className="dropdown-menu bg-primary">
                   <li onClick={toggleTheme}>
-                    <button className="btn ">Trocar tema</button>
+                    <button className="btn text-white w-100 text-start">
+                      Trocar tema
+                    </button>
                   </li>
                 </ul>
               </li>
