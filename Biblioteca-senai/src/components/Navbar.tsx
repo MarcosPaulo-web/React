@@ -35,9 +35,9 @@ export function Navbar() {
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              Dropdown button
+              Adm
             </button>
-            <ul className="dropdown-menu bg-primary-subtle">
+            <ul className="dropdown-menu dropdown-menu-end bg-primary-subtle">
               <li>
                 <a className="dropdown-item" href="#">
                   Action
