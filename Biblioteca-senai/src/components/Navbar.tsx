@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BotaoDropDown } from "./BotaoDropdown";
+import { BotaoDropdown } from "./BotaoDropdown";
 
 export function Navbar() {
   const [tema, setTema] = useState<"light" | "dark">("dark");
@@ -28,32 +28,31 @@ export function Navbar() {
             </button>
           </form>
 
-          <div className="dropdown nav-item">
-            <button
-              className="btn btn-primary dropdown-toggle"
-              type="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              Adm
+          <div className="d-flex flex-row">
+            <button className="btn btn-body" onClick={toggleTheme}>
+              {tema === "dark" ? (
+                <i className="bi bi-brightness-high-fill"></i>
+              ) : (
+                <i className="bi bi-moon-fill"></i>
+              )}
             </button>
-            <ul className="dropdown-menu dropdown-menu-end bg-primary-subtle">
-              <li>
-                <a className="dropdown-item" href="#">
-                  Action
-                </a>
-              </li>
-              <li>
-                <a className="dropdown-item" href="#">
-                  Another action
-                </a>
-              </li>
-              <li>
-                <a className="dropdown-item" href="#">
-                  Something else here
-                </a>
-              </li>
-            </ul>
+            <div className="dropdown nav-item">
+              <button
+                className="btn btn-primary dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Adm
+              </button>
+              <ul className="dropdown-menu dropdown-menu-end bg-primary-subtle">
+                <BotaoDropdown text={"Usuarios"} />
+                <BotaoDropdown text={"Cadastrar"} />
+                <BotaoDropdown text={"Empréstimos"} />
+                <BotaoDropdown text={"Relatórios"} />
+                <BotaoDropdown text={"Configurações"} />
+              </ul>
+            </div>
           </div>
         </div>
       </nav>
@@ -93,13 +92,14 @@ export function Navbar() {
                   Livros
                 </a>
                 <ul className="dropdown-menu bg-primary-subtle">
-                  <BotaoDropDown text={"Romance"} />
-                  <BotaoDropDown text={"Ação"} />
-                  <BotaoDropDown text={"Suspense"} />
-                  <BotaoDropDown text={"Terror"} />
-                  <BotaoDropDown text={"Comédia"} />
-                  <BotaoDropDown text={"Ciencia"} />
-                  <BotaoDropDown text={"Documentário"} />
+                  <BotaoDropdown text={"Romance"} />
+                  <BotaoDropdown text={"Ação"} />
+                  <BotaoDropdown text={"Suspense"} />
+                  <BotaoDropdown text={"Terror"} />
+                  <BotaoDropdown text={"Comédia"} />
+                  <BotaoDropdown text={"Ciencia"} />
+                  <BotaoDropdown text={"Documentário"} />
+                  <BotaoDropdown text={"infantil"} />
                 </ul>
               </li>
               <li className="nav-item dropdown">
