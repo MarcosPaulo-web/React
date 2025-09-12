@@ -14,7 +14,15 @@ export function Navbar() {
     <>
       <nav className="navbar bg-body">
         <div className="container-fluid">
-          <a className="navbar-brand fs-2">Senai</a>
+          <a className="navbar-brand fs-2 ">
+            <img
+              width="auto"
+              height="30"
+              className="d-inline-block"
+              src="https://logodownload.org/wp-content/uploads/2019/08/senai-logo-1.png"
+              alt=""
+            />
+          </a>
 
           <form className="d-flex w-25" role="search">
             <input
@@ -28,7 +36,7 @@ export function Navbar() {
             </button>
           </form>
 
-          <div className="d-flex flex-row">
+          <div className="d-flex gap-3 flex-row">
             <button className="btn btn-body" onClick={toggleTheme}>
               {tema === "dark" ? (
                 <i className="bi bi-brightness-high-fill"></i>

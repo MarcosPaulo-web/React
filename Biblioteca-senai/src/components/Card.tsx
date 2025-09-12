@@ -1,6 +1,6 @@
 export function Card() {
   return (
-    <div className="col-10 col-md-6 col-lg-3 col-xxl-3">
+    <div className="col-10 col-md-6 col-lg-3 col-xxl-3 ">
       <div
         className="card bg-body mb-3 border-2 border-primary-subtle"
         style={{ maxWidth: "540px" }}
