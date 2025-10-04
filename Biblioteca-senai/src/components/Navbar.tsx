@@ -1,7 +1,11 @@
 import { useState } from "react";
 import { BotaoDropdown } from "./BotaoDropdown";
 
-export function Navbar() {
+interface NavbarProps {
+  setPage: (page: number) => void;
+}
+
+export function Navbar({ setPage }: NavbarProps) {
   const [tema, setTema] = useState<"light" | "dark">("dark");
 
   function toggleTheme() {
@@ -54,11 +58,21 @@ export function Navbar() {
                 Adm
               </button>
               <ul className="dropdown-menu dropdown-menu-end bg-primary-subtle">
-                <BotaoDropdown text={"Usuarios"} />
-                <BotaoDropdown text={"Cadastrar"} />
-                <BotaoDropdown text={"Empréstimos"} />
-                <BotaoDropdown text={"Relatórios"} />
-                <BotaoDropdown text={"Configurações"} />
+                <BotaoDropdown
+                  text={"ListaLivros"}
+                  onClick={() => setPage(1)}
+                />
+                <BotaoDropdown text={"Usuarios"} onClick={() => setPage(2)} />
+                <BotaoDropdown text={"Cadastrar"} onClick={() => setPage(3)} />
+                <BotaoDropdown
+                  text={"Empréstimos"}
+                  onClick={() => setPage(4)}
+                />
+                <BotaoDropdown text={"Relatórios"} onClick={() => setPage(5)} />
+                <BotaoDropdown
+                  text={"Configurações"}
+                  onClick={() => setPage(6)}
+                />
               </ul>
             </div>
           </div>
