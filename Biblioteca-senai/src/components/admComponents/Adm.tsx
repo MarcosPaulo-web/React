@@ -5,7 +5,7 @@ export default function Adm() {
     <>
       <h1>Adm page</h1>
       <Link to="/">
-        <button> Cliente page </button>
+        <button className="btn btn-info"> Cliente page </button>
       </Link>
     </>
   );
