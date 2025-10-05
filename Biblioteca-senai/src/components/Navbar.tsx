@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { BotaoDropdown } from "./BotaoDropdown";
+import { Link } from "react-router-dom";
 
 interface NavbarProps {
   setPage: (page: number) => void;
@@ -62,7 +63,9 @@ export function Navbar({ setPage }: NavbarProps) {
                   text={"ListaLivros"}
                   onClick={() => setPage(1)}
                 />
-                <BotaoDropdown text={"Usuarios"} onClick={() => setPage(2)} />
+                <Link to={"/adm"}>
+                  <BotaoDropdown text={"Usuarios"} />
+                </Link>
                 <BotaoDropdown text={"Cadastrar"} onClick={() => setPage(3)} />
                 <BotaoDropdown
                   text={"Empréstimos"}

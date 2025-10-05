@@ -9,7 +9,6 @@ import Configuracoes from "./components/Configuracoes";
 
 export default function App() {
   const [page, setPage] = useState(1);
-
   const renderPage = (): JSX.Element => {
     switch (page) {
       case 1:
